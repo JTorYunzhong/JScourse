@@ -25,12 +25,32 @@ td {
 }
 input {
   margin-top: 10px;
-  border-style: groove;
+  box-sizing: content-box;
+  width: 200px;
+  border: 2px solid;
   border-color: rgb(0, 0, 0);
 }
 #search1 {
+  border-radius: 15px;
   background-image: url("./magnifier.jpg");
   background-size: 20px;
   background-repeat: no-repeat;
   padding-left: 15px;
+}
+.container {
+  display: flex;
+  background-color: bisque;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.child {
+  background-color: rgb(0, 255, 115);
+  /* margin: auto; */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
