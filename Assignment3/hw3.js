@@ -87,7 +87,20 @@ btn.onclick = function () {
   let form = document.querySelector("#newSudent");
   let studentInfo = form.value;
   form.value = "";
-  tbody.appendChild(createTableRow(...studentInfo.split("/")));
+  studentInfo = studentInfo.split("/");
+  if (studentInfo.length == 4) {
+    if (
+      studentInfo[0].match(/[a-zA-z\s]+/) &&
+      studentInfo[1].match(/[0-9]+/) &&
+      studentInfo[2].match(/[0-9\s-]{10}/) &&
+      studentInfo[3].match(/[0-9A-Za-z/s]+/)
+    ) {
+      tbody.appendChild(createTableRow(...studentInfo));
+      return;
+    }
+  }
+  alert("Invalid input! Please check your format and inut again.");
+  return;
 };
 /*
 
