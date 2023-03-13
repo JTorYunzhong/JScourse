@@ -1,20 +1,25 @@
-table {
-  border: 2px solid rgb(0, 0, 0);
+#q1 > table,
+#q1 th,
+#q1 td {
+  border: 1px solid;
+  border-collapse: collapse;
 }
-td,
-th {
-  border: 1px solid rgb(0, 0, 0);
+#q1 td,
+#q1 th {
+  text-align: center;
   padding: 10px 20px;
 }
 
-th {
+#q1 th {
   background-color: rgb(235, 235, 235);
 }
 
 tr:nth-child(even) {
   background-color: lightyellow;
 }
-
+td:hover {
+  background-color: lightcyan;
+}
 input {
   margin-top: 10px;
   box-sizing: content-box;

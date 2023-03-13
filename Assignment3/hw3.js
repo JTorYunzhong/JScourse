@@ -82,7 +82,7 @@ q1.insertBefore(table, q1.firstChild);
 
 //part II
 let btn = document.querySelector("#addNew");
-tbody = document.querySelector("#tbody");
+// tbody = document.querySelector("#tbody");
 btn.onclick = function () {
   let form = document.querySelector("#newSudent");
   let studentInfo = form.value;
@@ -142,12 +142,12 @@ const options = dropDownList.map(({ value, content }) => {
   return option;
 });
 dropdown.append(...options);
-q3.appendChild(dropdown);
-// part I I
-dropdown = document.querySelector("#selectCity");
+
+// part II
 dropdown.onchange = () => {
   console.log(dropdown.value);
 };
+q3.appendChild(dropdown);
 
 // for (var index = 1; index <= 3; index++) {
 //   (function (index) {
