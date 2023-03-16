@@ -38,16 +38,16 @@ const tableInfo = {
   ],
 };
 // prepartion
-let table = document.createElement("table");
-let thead = document.createElement("thead");
-let tbody = document.createElement("tbody");
+const table = document.createElement("table");
+const thead = document.createElement("thead");
+const tbody = document.createElement("tbody");
 tbody.id = "tbody";
 const thInfo = tableInfo["tableHeader"];
 const tcInfo = tableInfo["tableContent"];
-let q1 = document.getElementById("q1");
+const q1 = document.getElementById("q1");
 
 // initial thead
-hRow = document.createElement("tr");
+const hRow = document.createElement("tr");
 const theadNodes = thInfo.map((ele) => {
   let node = document.createElement("th");
   node.textContent = ele;
@@ -110,7 +110,7 @@ Given the array and generate order list and unordered list dynamically as follow
 */
 
 const list = ["HTML", "JavaScript", "CSS", "React", "Redux", "Java"];
-let q2 = document.getElementById("q2");
+const q2 = document.getElementById("q2");
 let ol = document.createElement("ol");
 let ul = document.createElement("ul");
 
@@ -145,7 +145,7 @@ const dropDownList = [
   { value: "sanJose", content: "San Jose" },
 ];
 // part I
-let q3 = document.querySelector("#q3");
+const q3 = document.querySelector("#q3");
 let dropdown = document.createElement("select");
 dropdown.id = "selectCity";
 const options = dropDownList.map(({ value, content }) => {
@@ -161,11 +161,3 @@ dropdown.onchange = () => {
   console.log(dropdown.value);
 };
 q3.appendChild(dropdown);
-
-// for (var index = 1; index <= 3; index++) {
-//   (function (index) {
-//     setTimeout(function () {
-//       console.log("after " + index + " second(s):" + index);
-//     }, index * 1000);
-//   })(index);
-// }
